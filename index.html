@@ -91,12 +91,9 @@ slider.addEventListener('mouseleave', stopDragging, false);
 document.querySelector('.box-outer').onscroll = function() {myFunction()};
 
 function myFunction() {
-	console.log(document.querySelector('.box-outer').scrollWidth);
-  console.log(document.querySelector('.box-outer').clientWidth);
   var winScroll = document.querySelector('.box-outer').scrollLeft;
   var height = document.querySelector('.box-outer').scrollWidth - document.querySelector('.box-outer').clientWidth;
   var scrolled = (winScroll / height) * 100;
-  console.log(scrolled);
   document.getElementById("myBar").style.width = scrolled + "%";
 }
 
